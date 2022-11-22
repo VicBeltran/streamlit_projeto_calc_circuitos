@@ -150,7 +150,9 @@ def main_ports():
     st.title("""Portas Lógicas""")
     st.markdown("""Neste programa, podemos simular as seguintes portas lógicas: AND,
                 OR, NAND, NOT, NOR, XOR, NXOR. Abaixo detemos os diagramas das portas lógicas
-                de maneira interativa para análise de outputs e inputs.""")
+                de maneira interativa para análise de outputs e inputs. No campo mais a direita
+                temos os inputs (A e B) os quais servem para alimentar a porta lógica, no centro,
+                a representação da porta lógica e mais à direita, o output do circuito.""")
     col1, col2, col3 = st.columns(3)
     with col1:
         st.markdown("""**INPUTS**""")
