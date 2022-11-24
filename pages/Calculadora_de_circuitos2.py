@@ -1,5 +1,4 @@
 import streamlit as st
-import time
 from utils.utilities import circ2_meia_onda, circ2_center_tape, circ2_onda_completa
 from PIL import Image
 
@@ -12,14 +11,9 @@ with st.sidebar:
 
     st.title("""Selecionador de parâmetros""")
 
-    r1 = st.number_input('Insira a resistência em R1')
-    r2 = st.number_input('Insira a resistência em R2')
-    r3 = st.number_input('Insira a resistência em R3')
-    r4 = st.number_input('Insira a resistência em R4')
-    r5 = st.number_input('Insira a resistência em R5')
-    r6 = st.number_input('Insira a resistência em R6')
-    v1 = st.number_input('Insira a tensão de E1')
-    v2 = st.number_input('Insira a tensão de E2')
+    r1 = st.number_input('Insira a resistência em R1 (Ω)')
+    v1 = st.number_input('Insira a tensão de E1 (V)')
+    v2 = st.number_input('Insira a tensão de E2 (V)')
 
     st.write('')
     bt = st.button("Calcular")
