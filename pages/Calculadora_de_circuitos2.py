@@ -1,9 +1,9 @@
 import streamlit as st
 import time
-from utils.utilities import circ1
+from utils.utilities import circ2_meia_onda, circ2_center_tape, circ2_onda_completa
 from PIL import Image
 
-st.title("""CALCULADORA DE CIRCUITO""")
+st.title("""CALCULADORA DE CIRCUITO 2""")
 image = Image.open('PIC_Schema.PNG')
 st.image(image, caption='Circuito')
 

@@ -1,8 +1,19 @@
 import streamlit as st
 import time
-from utils.utilities import calc
 from PIL import Image
 
 st.title("""Documentação""")
-image = Image.open('PIC_Schema.PNG')
-st.image(image, caption='Circuito')
+st.markdown("""Neste programa, podemos simular as seguintes portas lógicas: AND,
+                OR, NAND, NOT, NOR, XOR, NXOR. Abaixo detemos os diagramas das portas lógicas
+                de maneira interativa para análise de outputs e inputs. No campo mais a direita
+                temos os inputs (A e B) os quais servem para alimentar a porta lógica, no centro,
+                a representação da porta lógica e mais à direita, o output do circuito.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius neque lectus, eget bibendum odio molestie et. Cras in dui auctor quam ullamcorper laoreet. Pellentesque facilisis volutpat dapibus. Integer id eros lectus. Pellentesque consectetur mi ac odio dapibus, sed blandit orci scelerisque. Nullam vitae tortor tempor, aliquam ligula mattis, sagittis felis. Fusce at elit ultrices odio hendrerit fermentum at id sapien. Aenean cursus dolor eu lectus rhoncus, nec lobortis enim viverra. Nulla pharetra erat in tempor tincidunt. Proin massa turpis, posuere at neque nec, maximus pretium elit. Fusce finibus diam tincidunt, venenatis dolor ac, congue metus. Donec semper ipsum eget venenatis mollis. Curabitur tempus neque eu lacus dignissim, eu viverra dolor maximus.
+
+Vestibulum placerat, tortor nec eleifend vulputate, nunc diam mollis diam, non ultrices velit tortor vel risus. Nulla commodo, tellus in bibendum suscipit, nibh purus tempor tellus, id rutrum leo quam ultrices nisl. Donec ac justo sapien. Morbi venenatis, lectus vel scelerisque dapibus, tortor nisl ornare justo, nec congue libero tellus nec ligula. Etiam in purus ultrices, finibus lorem vitae, ultrices mi. Proin eget elementum dolor. Fusce vitae dolor varius, tempor massa eu, malesuada arcu. Curabitur lobortis sodales mattis. Aenean quis velit sit amet risus accumsan ullamcorper. Integer fringilla odio id ipsum auctor dapibus. Nam rutrum volutpat feugiat. Vestibulum scelerisque tincidunt malesuada. Aenean aliquam dolor vitae efficitur euismod. Donec sem nulla, congue quis fringilla id, blandit nec magna.
+
+Fusce eu mauris sit amet leo fringilla ornare eu a mi. Suspendisse potenti. Cras tempus lacus in hendrerit pulvinar. Curabitur accumsan risus odio, eget finibus ex aliquet vel. Nam tincidunt mi vel luctus finibus. Praesent ipsum dui, imperdiet vitae fringilla commodo, bibendum eu lacus. Proin aliquet libero ultrices nisl blandit, eget elementum diam sagittis. Proin hendrerit nisl in mattis pellentesque. Nullam cursus lorem nec justo vehicula egestas. Vestibulum blandit egestas posuere. Duis scelerisque fringilla lorem, sodales congue tellus sodales at.
+
+Sed ut bibendum risus. Donec accumsan ipsum eget libero porttitor malesuada. Suspendisse quis sapien consequat, porttitor nisl a, accumsan augue. Etiam eu metus eget justo vulputate vulputate. Curabitur laoreet ante at fringilla gravida. Mauris quis est tincidunt, ultrices eros eget, condimentum diam. Maecenas quis pellentesque nisi, non vestibulum leo. Duis ut semper libero, eget hendrerit nibh. Vestibulum ut nunc tellus. Maecenas eget elementum lectus. Proin vitae tortor sit amet urna consequat maximus in in ante. Quisque eget nibh vestibulum, interdum nulla ut, mattis justo. Suspendisse volutpat, nibh sit amet convallis ultrices, eros neque lacinia diam, quis ultricies tortor nisi vel arcu. Cras vestibulum metus vitae nulla viverra facilisis.
+
+Duis tincidunt condimentum eros eu rhoncus. Integer eros est, ullamcorper sit amet ornare fermentum, blandit eu leo. Etiam et mattis mi. Fusce eget erat sed tellus vulputate pharetra eu sit amet velit. Proin tincidunt, nibh ultrices pellentesque mollis, arcu elit porttitor metus, quis ornare libero metus eget dui. Quisque vitae consequat eros. Nunc vestibulum, leo quis lacinia euismod, metus erat eleifend augue, a maximus dui neque nec sapien. Duis laoreet commodo ex. Donec ac libero aliquet, elementum nunc quis, porta mauris. Suspendisse sit amet ex justo. Vivamus et urna in tortor pretium scelerisque. Nullam pellentesque vulputate est in iaculis. Donec in ligula non mi ultrices iaculis.""")
