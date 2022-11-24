@@ -10,6 +10,16 @@ def circ1(r1, r2, r3, r4, r5, r6, v1, v2):
 
     return solution
 
+def pot(i1,i2,i3,r1,r2,r3,r4,r5,r6, e1, e2):
+    p1 = r1*i1**2
+    p2 = r2*i2**2
+    p3 = r3*i1**2
+    p4 = r4*i1**2
+    p5 = r5*i3**2
+    p6 = r6*i3**2
+
+    pe1 = e1*i1
+    pe2 = e2*i3
 
 
 def circ2_meia_onda(d1, r1, c1, v1, n2, n1, freq):
