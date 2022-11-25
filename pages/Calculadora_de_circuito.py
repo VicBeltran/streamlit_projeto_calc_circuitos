@@ -30,7 +30,7 @@ with placeholder.container():
 
 if bt:
     try:
-        with st.spinner("Calculando parâmetros do circuito"):
+        with st.spinner("Calculando. . ."):
             circuit1 = circ1(r1,r2,r3,r4,r5,r6,v1,v2)
             pots = pot(circuit1[0], circuit1[1], circuit1[2], r1, r2, r3, r4, r5, r6, v1, v2)
             with placeholder.container():
