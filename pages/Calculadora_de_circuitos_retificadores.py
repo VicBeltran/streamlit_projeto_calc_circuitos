@@ -3,6 +3,7 @@ import streamlit as st
 from utils.utilities import circ2_meia_onda, circ2_center_tape, circ2_onda_completa
 from PIL import Image
 
+
 def reset():
     """
     Retorna a página para estado inicial.
