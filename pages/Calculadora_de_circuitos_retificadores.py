@@ -37,7 +37,7 @@ def meia_onda():
     with placeholder.container():
         st.markdown("""Para obter resultados para o circuito desejado,
                 insira os valores na sidebar e clique em calcular.""")
-    if 0 == 0:
+    try:
         if bt:
             with st.spinner("Calculando. . ."):
                 result = circ2_meia_onda(0.7, r1, c1, v1, n2, n1, freq)
@@ -47,7 +47,7 @@ def meia_onda():
                     st.markdown("Os resultados para o circuit são respectivamente:")
                     st.dataframe(result)
                     st.button("Escolher outro retificador", on_click=reset)
-    else:
+    except Exception as e:
         st.error(f"Por favor, insira valores válidos para o cálculo")
 
 
