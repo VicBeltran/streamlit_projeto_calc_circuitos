@@ -31,7 +31,7 @@ def init_params():
 def meia_onda():
     st.session_state["meia_onda"] = True
     r1, v1, freq, n2, n1, c1, bt = init_params()
-    initialize_circ('PIC_Schema.PNG', "Circuito Retificador de Meia Onda")
+    initialize_circ('images/meiaonda.jpeg', "Circuito Retificador de Meia Onda")
     st.markdown("## Resultados do cálculo: ")
     placeholder = st.empty()
     with placeholder.container():
@@ -54,7 +54,7 @@ def meia_onda():
 def center_tape():
     st.session_state["center_tape"] = True
     r1, v1, freq, n2, n1, c1, bt = init_params()
-    initialize_circ('PIC_Schema.PNG', "Circuito Retificador com Center Tape")
+    initialize_circ('images/meiaonda.jpeg', "Circuito Retificador com Center Tape")
     st.markdown("## Resultados do cálculo: ")
     placeholder = st.empty()
     with placeholder.container():
@@ -76,7 +76,7 @@ def center_tape():
 def onda_completa():
     st.session_state["onda_completa"] = True
     r1, v1, freq, n2, n1, c1, bt = init_params()
-    initialize_circ('PIC_Schema.PNG', "Circuito Retificador de Onda Completa")
+    initialize_circ('images/meiaonda.jpeg', "Circuito Retificador de Onda Completa")
     st.markdown("## Resultados do cálculo: ")
     placeholder = st.empty()
     with placeholder.container():
@@ -116,13 +116,13 @@ def main_rectifier():
             st.markdown("""Para usar a calculadora, selecione um dos tipos de circuito abaixo para efetuar os cálculos:""")
             col1, col2, col3 = st.columns(3)
             with col1:
-                initialize_circ('PIC_Schema.PNG', "Circuito Retificador Meia Onda")
+                initialize_circ('images/meiaonda.jpeg', "Circuito Retificador Meia Onda")
                 b1 = st.button("Retificador Meia Onda")
             with col2:
-                initialize_circ('PIC_Schema.PNG',"Circuito Retificador com Center Tape")
+                initialize_circ('images/meiaonda.jpeg',"Circuito Retificador com Center Tape")
                 b2 = st.button("Retificador com Center Tape")
             with col3:
-                initialize_circ('PIC_Schema.PNG',"Circuito Retificador Onda Completa")
+                initialize_circ('images/meiaonda.jpeg',"Circuito Retificador Onda Completa")
                 b3 = st.button("Retificador Onda Completa")
             
         if b1:

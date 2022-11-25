@@ -3,7 +3,7 @@ from utils.utilities import circ1, pot
 from PIL import Image
 
 st.title("""CALCULADORA DE CIRCUITO""")
-image = Image.open('PIC_Schema.PNG')
+image = Image.open('images/meiaonda.jpeg')
 st.image(image, caption='Circuito')
 
 with st.sidebar:
