@@ -169,4 +169,5 @@ def main_ports():
     nxor_gate()
 
 
+# Loop de execução principal
 main_ports()

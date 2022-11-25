@@ -4,6 +4,13 @@ from utils.utilities import circ2_meia_onda, circ2_center_tape, circ2_onda_compl
 from PIL import Image
 
 def reset():
+    """
+    Retorna a página para estado inicial.
+    Input:
+        None
+    Output:
+        None
+    """
     st.session_state["meia_onda"] = False
     del st.session_state["meia_onda"]
     st.session_state["onda_completa"] = False
@@ -11,11 +18,32 @@ def reset():
 
 
 def initialize_circ(img_name, label):
+    """
+    Gera a imagem do circuito na interface
+    Input:
+        None
+    Output:
+        None
+    """
     image = Image.open(img_name)
     st.image(image, caption=label)
 
 
 def init_params():
+    """
+    Inicializa a interface para inserção de parâmetros
+    Input:
+        None
+    Output:
+        r1 -> Resistência em ohms do resistor 1
+        c1 -> Capacitância do capacitor 1
+        v1 -> Tensão da fonte
+        n2 -> Número de espiras em n2 (saída)
+        n1 -> Número de espiras em n1 (entrada)
+        freq -> Frequência da fonte
+        bt -> Objeto botão de calcular
+    """
+
     with st.sidebar:
         st.title("""Selecionador de parâmetros""")
         r1 = st.number_input('Insira a resistência em R1 (Ω)')
@@ -29,6 +57,15 @@ def init_params():
 
 
 def meia_onda():
+    """
+    Gera a interface e faz call para função de
+    cálculo para retificadores de meia onda
+    Input:
+        None
+    Output:
+        None
+    """
+
     st.session_state["meia_onda"] = True
     r1, v1, freq, n2, n1, c1, bt = init_params()
     initialize_circ('images/meiaonda.jpeg', "Circuito Retificador de Meia Onda")
@@ -52,6 +89,14 @@ def meia_onda():
 
 
 def center_tape():
+    """
+    Gera a interface e faz call para função de
+    cálculo para retificadores de center tape
+    Input:
+        None
+    Output:
+        None
+    """
     st.session_state["center_tape"] = True
     r1, v1, freq, n2, n1, c1, bt = init_params()
     initialize_circ('images/meiaonda.jpeg', "Circuito Retificador com Center Tape")
@@ -74,6 +119,14 @@ def center_tape():
 
 
 def onda_completa():
+    """
+    Gera a interface e faz call para função de
+    cálculo para retificadores de onda completa
+    Input:
+        None
+    Output:
+        None
+    """
     st.session_state["onda_completa"] = True
     r1, v1, freq, n2, n1, c1, bt = init_params()
     initialize_circ('images/meiaonda.jpeg', "Circuito Retificador de Onda Completa")
@@ -135,4 +188,5 @@ def main_rectifier():
             placeholder.empty()
             onda_completa()
 
+# Loop de execução principal
 main_rectifier()
