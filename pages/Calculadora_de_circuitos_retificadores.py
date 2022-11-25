@@ -152,7 +152,7 @@ def main_rectifier():
     st.title("""CALCULADORA DE CIRCUITOS RETIFICADORES""")
     placeholder = st.empty()
 
-    # Verifica se estados já foram inicializados para cáculos
+    # Verifica se estados já foram inicializados para cáculos - basicamente evita bugs
     if 'meia_onda' not in st.session_state:
         st.session_state["meia_onda"] = False
         st.session_state["onda_completa"] = False
