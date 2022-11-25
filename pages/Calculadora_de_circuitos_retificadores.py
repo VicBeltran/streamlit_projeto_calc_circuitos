@@ -48,7 +48,7 @@ def meia_onda():
                     st.dataframe(result)
                     st.button("Escolher outro retificador", on_click=reset)
     except Exception as e:
-        st.error(f"Por favor, insira valores válidos para o cálculo")
+        st.error(f"Por favor, insira valores válidos para o cálculo - {e}")
 
 
 def center_tape():
@@ -70,7 +70,7 @@ def center_tape():
                     st.dataframe(result)
                     st.button("Escolher outro retificador", on_click=reset)
     except Exception as e:
-        st.error(f"Por favor, insira valores válidos para o cálculo")
+        st.error(f"Por favor, insira valores válidos para o cálculo - {e}")
 
 
 def onda_completa():
@@ -92,7 +92,7 @@ def onda_completa():
                     st.dataframe(result)
                     st.button("Escolher outro retificador", on_click=reset)
     except Exception as e:
-        st.error(f"Por favor, insira valores válidos para o cálculo")
+        st.error(f"Por favor, insira valores válidos para o cálculo - {e}")
 
 
 def main_rectifier():

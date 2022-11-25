@@ -41,4 +41,4 @@ if bt:
                 st.markdown("A potência dos componentes são respectivamente:")
                 st.dataframe(pots)
     except Exception as e:
-        st.error(f"Por favor, insira valores válidos para o cálculo")
+        st.error(f"Por favor, insira valores válidos para o cálculo - {e}")
