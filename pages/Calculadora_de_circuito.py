@@ -5,7 +5,7 @@ from PIL import Image
 
 def main_simple_circuit():
     st.title("""CALCULADORA DE CIRCUITO""")
-    image = Image.open('images/meiaonda.jpeg')
+    image = Image.open('images/circuito_simples.jpg')
     st.image(image, caption='Circuito')
 
     with st.sidebar:
