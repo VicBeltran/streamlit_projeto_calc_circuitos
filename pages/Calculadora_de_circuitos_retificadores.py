@@ -27,7 +27,9 @@ def initialize_circ(img_name, label):
         None
     """
     image = Image.open(img_name)
-    st.image(image, caption=label)
+    newsize = (600, 300)
+    image2 = image.resize(newsize)
+    st.image(image2, caption=label)
 
 
 def init_params():
@@ -53,7 +55,11 @@ def init_params():
         n1 = st.number_input('Insira o número de espiras em n1', format= "%d", value=0)
         n2 = st.number_input('Insira o número de espiras em n2', format= "%d", value=0)
         c1 = st.number_input('Insira a capacitância (F)', format= "%f")
-        bt = st.button("Calcular")
+        col1, col2 = st.columns(2)
+        with col1:
+            bt = st.button("Calcular", type='primary')
+        with col2:
+            st.button("Voltar ao menu", on_click=reset)
     return r1, v1, freq, n1, n2, c1, bt
 
 
@@ -69,7 +75,7 @@ def meia_onda():
 
     st.session_state["meia_onda"] = True
     r1, v1, freq, n2, n1, c1, bt = init_params()
-    initialize_circ('images/meiaonda.jpeg', "Circuito Retificador de Meia Onda")
+    initialize_circ('images/meia-onda.jpg', "Circuito Retificador de Meia Onda")
     st.markdown("## Resultados do cálculo: ")
     placeholder = st.empty()
     with placeholder.container():
@@ -79,12 +85,10 @@ def meia_onda():
         if bt:
             with st.spinner("Calculando. . ."):
                 result = circ2_meia_onda(0.7, r1, c1, v1, n2, n1, freq)
-                print(result)
                 with placeholder.container():
                     st.success("Cálculos realizados com sucesso!", icon="✅")
                     st.markdown("Os resultados para o circuit são respectivamente:")
                     st.dataframe(result)
-                    st.button("Escolher outro retificador", on_click=reset)
     except Exception as e:
         st.error(f"Por favor, insira valores válidos para o cálculo - {e}")
 
@@ -100,7 +104,7 @@ def center_tape():
     """
     st.session_state["center_tape"] = True
     r1, v1, freq, n2, n1, c1, bt = init_params()
-    initialize_circ('images/meiaonda.jpeg', "Circuito Retificador com Center Tape")
+    initialize_circ('images/center-tape.jpg', "Circuito Retificador com Center Tape")
     st.markdown("## Resultados do cálculo: ")
     placeholder = st.empty()
     with placeholder.container():
@@ -114,7 +118,6 @@ def center_tape():
                     st.success("Cálculos realizados com sucesso!", icon="✅")
                     st.markdown("Os resultados para o circuit são respectivamente:")
                     st.dataframe(result)
-                    st.button("Escolher outro retificador", on_click=reset)
     except Exception as e:
         st.error(f"Por favor, insira valores válidos para o cálculo - {e}")
 
@@ -130,7 +133,7 @@ def onda_completa():
     """
     st.session_state["onda_completa"] = True
     r1, v1, freq, n2, n1, c1, bt = init_params()
-    initialize_circ('images/meiaonda.jpeg', "Circuito Retificador de Onda Completa")
+    initialize_circ('images/onda-completa.jpg', "Circuito Retificador de Onda Completa")
     st.markdown("## Resultados do cálculo: ")
     placeholder = st.empty()
     with placeholder.container():
@@ -144,7 +147,6 @@ def onda_completa():
                     st.success("Cálculos realizados com sucesso!", icon="✅")
                     st.markdown("Os resultados para o circuit são respectivamente:")
                     st.dataframe(result)
-                    st.button("Escolher outro retificador", on_click=reset)
     except Exception as e:
         st.error(f"Por favor, insira valores válidos para o cálculo - {e}")
 
@@ -170,13 +172,13 @@ def main_rectifier():
             st.markdown("""Para usar a calculadora, selecione um dos tipos de circuito abaixo para efetuar os cálculos:""")
             col1, col2, col3 = st.columns(3)
             with col1:
-                initialize_circ('images/meiaonda.jpeg', "Circuito Retificador Meia Onda")
+                initialize_circ('images/meia-onda.jpg', "Circuito Retificador Meia Onda")
                 b1 = st.button("Retificador Meia Onda")
             with col2:
-                initialize_circ('images/meiaonda.jpeg',"Circuito Retificador com Center Tape")
+                initialize_circ('images/center-tape.jpg',"Circuito Retificador com Center Tape")
                 b2 = st.button("Retificador com Center Tape")
             with col3:
-                initialize_circ('images/meiaonda.jpeg',"Circuito Retificador Onda Completa")
+                initialize_circ('images/onda-completa.jpg',"Circuito Retificador Onda Completa")
                 b3 = st.button("Retificador Onda Completa")
             
         if b1:

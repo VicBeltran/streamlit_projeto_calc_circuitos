@@ -5,7 +5,7 @@ from PIL import Image
 
 def main_simple_circuit():
     st.title("""CALCULADORA DE CIRCUITO""")
-    image = Image.open('images/circuito_simples.jpg')
+    image = Image.open('images/circuito-simples.jpg')
     st.image(image, caption='Circuito')
 
     with st.sidebar:
@@ -22,7 +22,7 @@ def main_simple_circuit():
         v2 = st.number_input('Insira a tensão de E2 (V)')
 
         st.write('')
-        bt = st.button("Calcular")
+        bt = st.button("Calcular", type='primary')
 
     st.markdown("## Resultados do cálculo: ")
     placeholder = st.empty()
