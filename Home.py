@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 
-image_no = Image.open('images/nó.png')
+image_no = Image.open('images/nó.PNG')
 image_circ_doc = Image.open('images/circuito_docs1.PNG')
 
 
