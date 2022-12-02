@@ -74,7 +74,7 @@ def meia_onda():
     """
 
     st.session_state["meia_onda"] = True
-    r1, v1, freq, n2, n1, c1, bt = init_params()
+    r1, v1, freq, n1, n2, c1, bt = init_params()
     initialize_circ('images/meia-onda.jpg', "Circuito Retificador de Meia Onda")
     st.markdown("## Resultados do cálculo: ")
     placeholder = st.empty()
@@ -103,7 +103,7 @@ def center_tape():
         None
     """
     st.session_state["center_tape"] = True
-    r1, v1, freq, n2, n1, c1, bt = init_params()
+    r1, v1, freq, n1, n2, c1, bt = init_params()
     initialize_circ('images/center-tape.jpg', "Circuito Retificador com Center Tape")
     st.markdown("## Resultados do cálculo: ")
     placeholder = st.empty()
@@ -132,7 +132,7 @@ def onda_completa():
         None
     """
     st.session_state["onda_completa"] = True
-    r1, v1, freq, n2, n1, c1, bt = init_params()
+    r1, v1, freq, n1, n2, c1, bt = init_params()
     initialize_circ('images/onda-completa.jpg', "Circuito Retificador de Onda Completa")
     st.markdown("## Resultados do cálculo: ")
     placeholder = st.empty()
