@@ -91,8 +91,8 @@ def circ2_meia_onda(d1: float, r1: float, c1: float, v1: float, n2: int, n1: int
     i_carga = (peak_c1/r1)
     valores_ret.append(str(f"{i_carga:.4f}A"))
     ripple = i_carga/(freq*c1)
-    valores_ret.append(str(f"{ripple:.2f}")) # OBJECTIVE B
-    valores_ret.append(str(f"{((peak_c1 + (peak_c1-ripple))/2):.2f}")) # OBJECTIVE C
+    valores_ret.append(str(f"{ripple:.2f}V")) # OBJECTIVE B
+    valores_ret.append(str(f"{((peak_c1 + (peak_c1-ripple))/2):.2f}V")) # OBJECTIVE C
     data_frame = {"Rótulo de medida": ROTULOS_C2, "Valores": valores_ret}
     return pd.DataFrame.from_dict(data_frame)
 
@@ -123,8 +123,8 @@ def circ2_center_tape(d1: float, r1: float, c1: float, v1: float, n2: int, n1: i
     i_carga = peak_c1/r1
     valores_ret.append(str(f"{i_carga:.4f}A"))
     ripple = i_carga/(freq*c1*2)
-    valores_ret.append(str(f"{ripple:.2f}")) # OBJECTIVE B
-    valores_ret.append(str(f"{((peak_c1 + (peak_c1-ripple))/2):.2f}")) # OBJECTIVE C
+    valores_ret.append(str(f"{ripple:.2f}V")) # OBJECTIVE B
+    valores_ret.append(str(f"{((peak_c1 + (peak_c1-ripple))/2):.2f}V")) # OBJECTIVE C
     data_frame = {"Rótulo de medida": ROTULOS_C2, "Valores": valores_ret}
     return pd.DataFrame.from_dict(data_frame)
 
@@ -155,8 +155,8 @@ def circ2_onda_completa(d1: float, r1: float, c1: float, v1: float, n2: int, n1:
     i_carga = peak_c1/r1
     valores_ret.append(str(f"{i_carga:.4f}A"))
     ripple = i_carga/(freq*c1*2)
-    valores_ret.append(str(f"{ripple:.2f}")) # OBJECTIVE B
-    valores_ret.append(str(f"{((peak_c1 + (peak_c1-ripple))/2):.2f}")) # OBJECTIVE C
+    valores_ret.append(str(f"{ripple:.2f}V")) # OBJECTIVE B
+    valores_ret.append(str(f"{((peak_c1 + (peak_c1-ripple))/2):.2f}V")) # OBJECTIVE C
     data_frame = {"Rótulo de medida": ROTULOS_C2, "Valores": valores_ret}
     return pd.DataFrame.from_dict(data_frame)
 
