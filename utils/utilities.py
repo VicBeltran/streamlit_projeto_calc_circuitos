@@ -89,7 +89,7 @@ def circ2_meia_onda(d1: float, r1: float, c1: float, v1: float, n2: int, n1: int
     peak_c1 = peak_v2 - d1
     valores_ret.append(str(f"{peak_c1:.2f}V")) # OBJECTIVE A
     i_carga = (peak_c1/r1)
-    valores_ret.append(str(f"{i_carga:.2f}A"))
+    valores_ret.append(str(f"{i_carga:.4f}A"))
     ripple = i_carga/(freq*c1)
     valores_ret.append(str(f"{ripple:.2f}")) # OBJECTIVE B
     valores_ret.append(str(f"{((peak_c1 + (peak_c1-ripple))/2):.2f}")) # OBJECTIVE C
@@ -121,7 +121,7 @@ def circ2_center_tape(d1: float, r1: float, c1: float, v1: float, n2: int, n1: i
     peak_c1 = (peak_v2/2) - d1
     valores_ret.append(str(f"{peak_c1:.2f}V")) # OBJECTIVE A
     i_carga = peak_c1/r1
-    valores_ret.append(str(f"{i_carga:.2f}A"))
+    valores_ret.append(str(f"{i_carga:.4f}A"))
     ripple = i_carga/(freq*c1*2)
     valores_ret.append(str(f"{ripple:.2f}")) # OBJECTIVE B
     valores_ret.append(str(f"{((peak_c1 + (peak_c1-ripple))/2):.2f}")) # OBJECTIVE C
@@ -153,7 +153,7 @@ def circ2_onda_completa(d1: float, r1: float, c1: float, v1: float, n2: int, n1:
     peak_c1 = peak_v2 - (2*d1)
     valores_ret.append(str(f"{peak_c1:.2f}V")) # OBJECTIVE A
     i_carga = peak_c1/r1
-    valores_ret.append(str(f"{i_carga:.2f}A"))
+    valores_ret.append(str(f"{i_carga:.4f}A"))
     ripple = i_carga/(freq*c1*2)
     valores_ret.append(str(f"{ripple:.2f}")) # OBJECTIVE B
     valores_ret.append(str(f"{((peak_c1 + (peak_c1-ripple))/2):.2f}")) # OBJECTIVE C
